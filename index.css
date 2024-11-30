@@ -1,0 +1,83 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10vh;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #64646489;
+    border-bottom: 1px solid #ccc;
+}
+
+.main {
+    display: flex;
+    padding: 10px;
+}
+
+#canvas {
+    width: 100%;
+    height: 50vh;
+    border: 2px dashed #ccc;
+    background: white;
+    position: relative; /* Required for absolute children */
+    overflow: hidden; /* Prevent elements from spilling out */
+}
+
+.features {
+    width: 201px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #ccc;
+}
+
+footer {
+    padding: 10px;
+    background-color: #64646489;
+    border-top: 1px solid #ccc;
+    border-radius: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+}
+
+button, select {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+#canvas .text-element {
+    position: absolute;
+    font-size: 16px;
+    font-family: Arial;
+    cursor: move;
+    user-select: none;
+}
+
+#canvas .text-element:focus {
+    outline: 1px solid blue;
+}
